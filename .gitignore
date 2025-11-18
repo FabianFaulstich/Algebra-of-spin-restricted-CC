@@ -9,7 +9,7 @@ __pycache__/
 venv/
 .env/
 .venv/
-srcc/        # your virtual environment folder inside the repo
+/srcc/
 
 # ---- Build / packaging ----
 build/
