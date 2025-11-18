@@ -1,1 +1,1 @@
-Algebra of Spin-Restricted Coupled Cluster (SR-CC)
+Algebra of Spin-Restricted Coupled Cluster (SR-CC) Theory

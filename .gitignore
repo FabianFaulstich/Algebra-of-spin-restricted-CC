@@ -1,0 +1,69 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+*.dylib
+
+# ---- Virtual environments ----
+venv/
+.env/
+.venv/
+srcc/        # your virtual environment folder inside the repo
+
+# ---- Build / packaging ----
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+
+# ---- Hatch / editable builds ----
+*.manifest
+*.hatch
+
+# ---- Jupyter ----
+.ipynb_checkpoints/
+
+# ---- macOS ----
+.DS_Store
+
+# ---- Editors / IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- Logs ----
+*.log
+
+# ---- Local data (DO NOT TRACK) ----
+data/
+datasets/
+results/
+scratch/
+tmp/
+
+# Common scientific / numeric data files
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.csv
+*.tsv
+*.txt
+*.dat
+
+# Quantum chemistry / PySCF output, checkpoints, etc.
+*.molden
+*.fchk
+*.chk
+*.cube
+*.wfn
+*.wfx
+*.fcidump
+*.mol
+*.xyz
+*.log
+*.out
+
