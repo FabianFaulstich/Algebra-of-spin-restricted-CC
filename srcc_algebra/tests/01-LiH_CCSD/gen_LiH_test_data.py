@@ -58,11 +58,11 @@ if __name__ == '__main__':
 
     ene = energy(mf, h1e, eri, t1, t2)
 
-    breakpoint()
     #writing to file:
     np.save('h1e.npy', h1e)  
     np.save('eri.npy', eri) 
     np.save('t1.npy', h1e)  
     np.save('t2.npy', h1e) 
-    np.save('HF_energy', mf.e_tot)
-    np.save('CC_total_energy', mycc.e_tot)
+    np.save('HF_energy.npy', mf.e_tot)
+    np.save('nuc_energy.npy', mol.get_enuc())
+    np.save('CC_total_energy.npy', mycc.e_tot)
