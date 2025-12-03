@@ -42,11 +42,13 @@ if __name__ == '__main__':
 
     #opt = 1 is 2 electron pairs in 4 spatial orbitals 
     #opt = 2 is 1 electron pair in 5 spatial orbitals
-    opt = 1
+    opt = 2
 
-    n_steps = 10
+    n_steps = 50
     bds = np.linspace(1, 3, num = n_steps)
+    np.save(f'bonds.npy', bds)  
 
+    enucs = []
     for bd in bds:
         Mol = [['Li',[0,0,0]],['H',[bd,0,0]]]
 
@@ -70,7 +72,10 @@ if __name__ == '__main__':
         h1e, eri = get_mo_integrals(mf, act_orbs)
 
         #writing to file:
-        np.save(f'h1e_{opt}_{np.round(bd, 3)}.npy', h1e)  
-        np.save(f'eri_{opt}_{np.round(bd, 3)}.npy', eri) 
-        np.save(f'HF_energy_{opt}_{np.round(bd, 3)}.npy', mf.e_tot)
-        np.save(f'nuc_energy.npy_{opt}_{np.round(bd, 3)}', mol.get_enuc())
+        np.save(f'h1e/h1e_{opt}_{np.round(bd, 3)}.npy', h1e)  
+        np.save(f'eri/eri_{opt}_{np.round(bd, 3)}.npy', eri) 
+        np.save(f'ehf/HF_energy_{opt}_{np.round(bd, 3)}.npy', mf.e_tot)
+
+        enucs.append(mol.get_enuc())
+    
+    np.save(f'enucs.npy', enucs)

@@ -61,8 +61,8 @@ if __name__ == '__main__':
     #writing to file:
     np.save('h1e.npy', h1e)  
     np.save('eri.npy', eri) 
-    np.save('t1.npy', h1e)  
-    np.save('t2.npy', h1e) 
+    np.save('t1.npy', t1)  
+    np.save('t2.npy', t2) 
     np.save('HF_energy.npy', mf.e_tot)
     np.save('nuc_energy.npy', mol.get_enuc())
     np.save('CC_total_energy.npy', mycc.e_tot)
